@@ -1,0 +1,23 @@
+{
+  "code": "finik_2qr_pay",
+  "name": {
+    "ru": "Finik QR-оплата"
+  },
+  "description": {
+    "ru": "Интеграция с платёжной системой Finik через QR"
+  },
+  "version": "1.0.0",
+  "url": "https://your-server.com/index.html",
+  "application": {
+    "iframe": "https://your-server.com/index.html",
+    "menu_name": {
+      "ru": "Finik QR"
+    },
+    "placement": ["default"]
+  },
+  "auth": true,
+  "scopes": [
+    "sale",
+    "user"
+  ]
+}

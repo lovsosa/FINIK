@@ -13,4 +13,5 @@ ENV TZ=Asia/Almaty
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["node", "app.js"]
+

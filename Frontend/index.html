@@ -4,22 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FINIK Интеграция</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://api.bitrix24.com/api/v1/"></script>
   </head>
   <body>
-    <h1>Подключение Finik как платёжной системы</h1>
-    <form id="userKeyAndId">
-      <label for="userId">FINIK_ACCOUNT_ID:</label><br />
-      <input type="text" id="userId" name="userId" required /><br /><br />
+    <div class="backdrop"></div>
+    <header class="header">
+      <img src="./LogoPurple.png" alt="FinikLogo" class="finik-logo__image" />
+      <form id="userKeyAndId">
+        <div class="form__cart">
+          <h1 class="form__cart--title">Заполните данные</h1>
+          <input
+            class="form__cart--input"
+            type="text"
+            id="userId"
+            name="userId"
+            placeholder="Финик ID"
+            required
+          />
 
-      <label for="userKey">FINIK_TOKEN:</label><br />
-      <input type="text" id="userKey" name="userKey" required /><br /><br />
+          <input
+            class="form__cart--input"
+            type="text"
+            id="userKey"
+            name="userKey"
+            placeholder="Финик ключ"
+            required
+          />
 
-      <button type="submit">Создать обработчик</button>
-    </form>
+          <button class="form__cart__btn" type="submit">Далее</button>
+          <pre id="response"></pre>
+        </div>
+      </form>
 
-    <pre id="response"></pre>
-
+      <span class="about__text"
+        >Чтобы получить ID и ключ для интеграции,
+        <a href="https://jarvis.kg/">свяжитесь с нами</a></span
+      >
+    </header>
     <script src="main.js"></script>
   </body>
 </html>

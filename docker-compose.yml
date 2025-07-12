@@ -23,7 +23,7 @@ services:
       - NGROK_AUTHTOKEN=2zDxGlYkfxcagkRjltnQUsX68Mw_79Vm9Vp24wvRvF7fNSEG
     volumes:
       - ./ngrok.yml:/etc/ngrok/ngrok.yml
-    command: http Backend:3000 --url=jarvis-finikpay.ngrok.pro
+    command: http backend:3000 --url=jarvis-finikpay.ngrok.pro
     depends_on:
       - backend
     networks:
